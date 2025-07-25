@@ -36,7 +36,7 @@ const HomePage = () => {
 
         <div className="flex-[0_1_50%] max-w-[450px] min-[784]:max-w-none grid place-items-center grid-cols-[minmax(0,1fr)_minmax(0,0.2fr)_minmax(0,1fr)] grid-rows-1 min-[784]:place-items-stretch min-[784]:grid-cols-4 min-[784]:grid-rows-2">
           <Image
-            src="/home1.png"
+            src="/home1.webp"
             alt="A kitchen"
             width={473}
             height={446}
@@ -46,7 +46,7 @@ const HomePage = () => {
           />
 
           <Image
-            src="/home2.png"
+            src="/home2.webp"
             alt="A bathroom sink"
             width={385}
             height={271}

@@ -109,7 +109,7 @@ const ViewProducts = () => {
           {!savedItems.length ? (
             <section className=" flex justify-center items-center flex-col">
               <Image
-                src="/empty.png"
+                src="/empty.webp"
                 alt="A bathroom sink"
                 width={350}
                 height={292}
