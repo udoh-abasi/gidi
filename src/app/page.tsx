@@ -1,5 +1,33 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Gidi Home Essentials",
+  description:
+    "Shop for reliable household appliances and stylish decor to perfectly complete your home.",
+  openGraph: {
+    title: "Gidi Home Essentials",
+    description:
+      "Shop for reliable household appliances and stylish decor to perfectly complete your home.",
+    url: "https://gidi-sepia.vercel.app",
+    siteName: "Gidi",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+};
 
 const HomePage = () => {
   return (
