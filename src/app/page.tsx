@@ -1,103 +1,78 @@
 import Image from "next/image";
+import Link from "next/link";
 
-export default function Home() {
+const HomePage = () => {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main className="min-h-dvh px-4 grid place-items-center">
+      <section className="min-[784]:flex">
+        <div className="flex-[0_1_50%]">
+          <h1 className="text-4xl text-center min-[784]:text-left min-[784]:text-[46px] min-[910px]:text-[56px] font-bold pt-[40px]">
+            <span className="block">Your Home Essentials,</span>{" "}
+            <span>All In One Place.</span>
+          </h1>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          <h2 className="text-sm py-8 text-center min-[784]:text-left min-[910px]:text-[24px] max-w-[471px] min-[784]:py-[56px]">
+            Simplify your shopping with our extensive selection of reliable
+            household appliances and stylish decor to perfectly complete your
+            home.
+          </h2>
+
+          <div className="gap-[24px] hidden min-[784]:flex">
+            <Link
+              href={`/addProduct`}
+              className="flex items-center justify-center rounded w-[193px] h-[56px] text-white bg-[#165a4a] hover:bg-black font-bold"
+            >
+              Get Started
+            </Link>
+
+            <Link
+              href={`/viewProducts`}
+              className="flex items-center justify-center rounded w-[146px] h-[56px] ring ring-black hover:bg-black hover:text-white font-bold"
+            >
+              View All Products
+            </Link>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+
+        <div className="flex-[0_1_50%] max-w-[450px] min-[784]:max-w-none grid place-items-center grid-cols-[minmax(0,1fr)_minmax(0,0.2fr)_minmax(0,1fr)] grid-rows-1 min-[784]:place-items-stretch min-[784]:grid-cols-4 min-[784]:grid-rows-2">
           <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            src="/home1.png"
+            alt="A kitchen"
+            width={473}
+            height={446}
+            className="min-[784]:w-[473px] min-[784]:h-[446px] col-start-1 col-end-3 row-start-1 row-end-2 min-[784]:col-start-1 min-[784]:col-end-4 min-[784]:row-start-1 min-[784]:row-end-3"
+            // blurDataURL=""
+            // placeholder="blur" // Optional blur-up while loading
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+
           <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+            src="/home2.png"
+            alt="A bathroom sink"
+            width={385}
+            height={271}
+            className="min-[784]:w-[385px] min-[784]:h-[271px] col-start-2 col-end-4 row-start-1 row-end-2 min-[784]:col-start-2 min-[784]:col-end-5 min-[784]:row-start-2 min-[784]:row-end-3"
+            // placeholder="blur" // Optional blur-up while loading
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        </div>
+
+        <div className="p-8 flex flex-col items-center justify-center gap-6 min-[784]:hidden">
+          <Link
+            href={`/addProduct`}
+            className="flex items-center justify-center rounded w-full max-w-[289px] h-[45px] text-white bg-[#165a4a] hover:bg-black font-bold"
+          >
+            Get Started
+          </Link>
+
+          <Link
+            href={`/viewProducts`}
+            className="flex items-center justify-center rounded w-full max-w-[222px] h-[40px] ring ring-black hover:bg-black hover:text-white font-bold"
+          >
+            View All Products
+          </Link>
+        </div>
+      </section>
+    </main>
   );
-}
+};
+
+export default HomePage;
